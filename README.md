@@ -15,3 +15,5 @@ This is a basic V13 Discord Bot Template.
 
 # Credits
 - Created by [@Hyperz](https://hyperz.net/discord)
+
+![banner](https://cdn.hyperz.net/main/GQj0wj.png)
