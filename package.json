@@ -14,7 +14,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
-    "discord.js": "^13.2.0",
+    "discord.js": "^13.3.1",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "hyperz-nodelogger": "^3.7.2",
