@@ -42,6 +42,12 @@ module.exports = async(client, con, interaction) => {
                         edited.setFooter(`Page 3/3`)
                         message.edit({ embeds: [edited], components: [row] }).catch(e => {})
                         interaction.deferUpdate();
+                    } else if(embed.footer.text.includes('Page 3/3')) {
+                        edited.fields = null;
+                        edited.setDescription(page2);
+                        edited.setFooter(`Page 2/3`)
+                        message.edit({ embeds: [edited], components: [row] }).catch(e => {})
+                        interaction.deferUpdate();
                     } else if(embed.footer.text.includes('Page 2/3')) {
                         edited.setDescription(``);
                         edited.addFields(
@@ -51,12 +57,6 @@ module.exports = async(client, con, interaction) => {
                             { name: "Copyright", value: `${client.config.copyright}`, inline: false, },
                         )
                         edited.setFooter(`Page 1/3`)
-                        message.edit({ embeds: [edited], components: [row] }).catch(e => {})
-                        interaction.deferUpdate();
-                    } else if(embed.footer.text.includes('Page 3/3')) {
-                        edited.fields = null;
-                        edited.setDescription(page2);
-                        edited.setFooter(`Page 2/3`)
                         message.edit({ embeds: [edited], components: [row] }).catch(e => {})
                         interaction.deferUpdate();
                     }
